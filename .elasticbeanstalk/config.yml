@@ -1,8 +1,8 @@
 branch-defaults:
   default:
-    environment: jeceproject-env
+    environment: jece-env
 global:
   application_name: jeceProject
-  default_region: us-east-1
+  default_region: ap-southeast-1
   profile: eb-cli
   sc: git
