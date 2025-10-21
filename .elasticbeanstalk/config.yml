@@ -1,9 +1,10 @@
 branch-defaults:
   default:
     environment: jece-env
+  develop:
+    environment: jece-env
 global:
-  application_name: jece
-  default_ec2_keyname: null
+  application_name: jeceProject
   default_platform: Python 3.12 running on 64bit Amazon Linux 2023
-  default_region: us-east-1
+  default_region: ap-southeast-1
   sc: git
