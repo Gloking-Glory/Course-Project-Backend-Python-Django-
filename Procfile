@@ -1,1 +1,1 @@
-web: gunicorn jeceProject.wsgi:application
+web: gunicorn jeceProject.wsgi:application --bind 0.0.0.0:$PORT
