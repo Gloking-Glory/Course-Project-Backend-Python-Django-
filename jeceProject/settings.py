@@ -16,6 +16,11 @@ import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# load .env only for local
+if os.path.exists(BASE_DIR / ".env"):
+    load_dotenv(BASE_DIR / ".env")
+
 load_dotenv(BASE_DIR / '.env')
 
 
@@ -24,15 +29,15 @@ load_dotenv(BASE_DIR / '.env')
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'elasticbeanstalk.com').split(',')
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", ".elasticbeanstalk.com,localhost,127.0.0.1").split(",")
 CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', '').split(',')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # Application definition
 
@@ -83,22 +88,11 @@ REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': 'rest_framework.views.exception_handler',
 }
 
-if not DEBUG:
-    REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'] = ['rest_framework.renderers.JSONRenderer'] # Disable browsable API in production
-    SECURE_BROWSER_XSS_FILTER = True  # Prevent reflected XSS attacks
-    SECURE_CONTENT_TYPE_NOSNIFF = True  # Prevent MIME sniffing
-    X_FRAME_OPTIONS = 'DENY'  # Prevent clickjacking via iframes
-    CORS_ALLOW_CREDENTIALS = True
-    CORS_ALLOW_ALL_ORIGINS = False
-    CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', '').split(',')
-else:
-    # development cors setups
-    CORS_ALLOW_CREDENTIALS = True
+if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = True
-    CORS_ALLOWED_ORIGINS = [
-        "http://localhost:3000",
-        "http://127.0.0.1:3000"
-    ]
+else:
+    CORS_ALLOW_ALL_ORIGINS = False
+    CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS", "").split(",")
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -135,22 +129,36 @@ WSGI_APPLICATION = 'jeceProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-if os.getenv('USE_POSTGRES', 'False') == 'True':
+# if os.getenv('USE_POSTGRES', 'False') == 'True':
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'NAME': os.getenv('DATABASE_NAME'),
+#             'USER': os.getenv('DATABASE_USER'),
+#             'PASSWORD': os.getenv('DATABASE_PASSWORD'),
+#             'HOST': os.getenv('DATABASE_HOST', 'localhost'),
+#             'PORT': os.getenv('DATABASE_PORT', '5432'),
+#         }
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
+
+if os.getenv("USE_POSTGRES", "False") == "True":
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.getenv('DATABASE_NAME'),
-            'USER': os.getenv('DATABASE_USER'),
-            'PASSWORD': os.getenv('DATABASE_PASSWORD'),
-            'HOST': os.getenv('DATABASE_HOST', 'localhost'),
-            'PORT': os.getenv('DATABASE_PORT', '5432'),
-        }
+        "default": dj_database_url.config(
+            default=f"postgres://{os.getenv('DATABASE_USER')}:{os.getenv('DATABASE_PASSWORD')}@{os.getenv('DATABASE_HOST')}:{os.getenv('DATABASE_PORT', '5432')}/{os.getenv('DATABASE_NAME')}"
+        )
     }
 else:
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
         }
     }
 
