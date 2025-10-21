@@ -88,6 +88,7 @@ python-dotenv
 dj-database-url
 psycopg2-binary # Required for PostgreSQL
 gunicorn # For production deployment
+whitenoise # For production deployment
 ```
 
 Install the packages:
@@ -102,9 +103,9 @@ Create a file named `.env` in the project root (`jeceProject/`) and populate it 
 **`.env` file:**
 ```env
 # Django Settings
-SECRET_KEY='your-strong-secret-key' or django secret key 'django-insecure-3f!o(3@8_2z-7u7l!t9p8*6l4+z3l&s@a$3p5x*e#k#z6(5b1'
+SECRET_KEY=django-insecure-3f!o(3@8_2z-7u7l!t9p8*6l4+z3l&s@a$3p5x*e#k#z6(5b1
 DEBUG=True
-ALLOWED_HOSTS=127.0.0.1,localhost,yourdomain.com,www.yourdomain.com
+ALLOWED_HOSTS=127.0.0.1,localhost,domain.com,www.domain.com
 
 # CORS Settings for Development
 CORS_ALLOWED_ORIGINS=http://localhost:3000,http://127.0.0.1:3000
@@ -124,6 +125,10 @@ USE_POSTGRES=False
 ### 5. Run Database Migrations
 
 This command creates the necessary database tables based on your models.
+
+```bash
+python manage.py makemigrations
+```
 
 ```bash
 python manage.py migrate
