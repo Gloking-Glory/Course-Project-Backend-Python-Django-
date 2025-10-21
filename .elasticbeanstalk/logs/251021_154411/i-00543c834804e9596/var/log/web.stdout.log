@@ -1,0 +1,13 @@
+Oct 20 23:52:20 ip-172-31-34-251 web[2075]: [2025-10-20 23:52:20 +0000] [2075] [INFO] Starting gunicorn 23.0.0
+Oct 20 23:52:20 ip-172-31-34-251 web[2075]: [2025-10-20 23:52:20 +0000] [2075] [INFO] Listening at: http://127.0.0.1:8000 (2075)
+Oct 20 23:52:20 ip-172-31-34-251 web[2075]: [2025-10-20 23:52:20 +0000] [2075] [INFO] Using worker: gthread
+Oct 20 23:52:20 ip-172-31-34-251 web[2109]: [2025-10-20 23:52:20 +0000] [2109] [INFO] Booting worker with pid: 2109
+Oct 21 12:56:48 ip-172-31-34-251 web[2075]: [2025-10-21 12:56:48 +0000] [2075] [INFO] Handling signal: term
+Oct 21 12:56:48 ip-172-31-34-251 web[2109]: [2025-10-21 12:56:48 +0000] [2109] [INFO] Worker exiting (pid: 2109)
+Oct 21 12:56:48 ip-172-31-34-251 web[2075]: [2025-10-21 12:56:48 +0000] [2075] [INFO] Shutting down: Master
+Oct 21 12:56:50 ip-172-31-34-251 web[31456]: Error: '' is not a valid port number.
+Oct 21 12:56:50 ip-172-31-34-251 web[31499]: Error: '' is not a valid port number.
+Oct 21 12:56:51 ip-172-31-34-251 web[31517]: Error: '' is not a valid port number.
+Oct 21 12:56:51 ip-172-31-34-251 web[31522]: Error: '' is not a valid port number.
+Oct 21 12:56:52 ip-172-31-34-251 web[31527]: Error: '' is not a valid port number.
+Oct 21 12:56:52 ip-172-31-34-251 web[31532]: Error: '' is not a valid port number.

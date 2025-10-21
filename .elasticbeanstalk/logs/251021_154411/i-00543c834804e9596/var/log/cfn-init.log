@@ -1,0 +1,516 @@
+2025-10-20 23:51:55,292 [INFO] -----------------------Starting build-----------------------
+2025-10-20 23:51:55,297 [INFO] Running configSets: _OnInstanceBoot
+2025-10-20 23:51:55,299 [INFO] Running configSet _OnInstanceBoot
+2025-10-20 23:51:55,301 [INFO] Running config AWSEBBaseConfig
+2025-10-20 23:51:55,518 [INFO] Command clearbackupfiles succeeded
+2025-10-20 23:51:55,521 [INFO] Running config AWSEBCfnHupEndpointOverride
+2025-10-20 23:51:55,526 [INFO] Command clearbackupfiles succeeded
+2025-10-20 23:51:55,527 [INFO] ConfigSets completed
+2025-10-20 23:51:55,528 [INFO] -----------------------Build complete-----------------------
+2025-10-20 23:52:17,231 [INFO] -----------------------Starting build-----------------------
+2025-10-20 23:52:17,237 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-20 23:52:17,240 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-20 23:52:17,243 [INFO] Running config prebuild_0_jeceProject
+2025-10-20 23:52:17,246 [INFO] Running config prebuild_1_jeceProject
+2025-10-20 23:52:17,247 [INFO] ConfigSets completed
+2025-10-20 23:52:17,247 [INFO] -----------------------Build complete-----------------------
+2025-10-20 23:52:19,667 [INFO] -----------------------Starting build-----------------------
+2025-10-20 23:52:19,672 [INFO] Running configSets: Infra-EmbeddedPostBuild
+2025-10-20 23:52:19,674 [INFO] Running configSet Infra-EmbeddedPostBuild
+2025-10-20 23:52:19,674 [INFO] ConfigSets completed
+2025-10-20 23:52:19,674 [INFO] -----------------------Build complete-----------------------
+2025-10-21 11:00:07,433 [INFO] -----------------------Starting build-----------------------
+2025-10-21 11:00:07,458 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 11:00:07,464 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 11:00:07,465 [INFO] ConfigSets completed
+2025-10-21 11:00:07,465 [INFO] -----------------------Build complete-----------------------
+2025-10-21 11:37:41,681 [INFO] -----------------------Starting build-----------------------
+2025-10-21 11:37:41,686 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 11:37:41,688 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 11:37:41,688 [INFO] ConfigSets completed
+2025-10-21 11:37:41,688 [INFO] -----------------------Build complete-----------------------
+2025-10-21 11:52:17,511 [INFO] -----------------------Starting build-----------------------
+2025-10-21 11:52:17,516 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 11:52:17,519 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 11:52:17,521 [INFO] Running config prebuild_0_jeceProject
+2025-10-21 11:52:33,404 [ERROR] postgresql-devel is not available to be installed
+2025-10-21 11:52:33,404 [ERROR] Error encountered during build of prebuild_0_jeceProject: Yum does not have postgresql-devel available for installation
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 244, in build
+    changes['packages'][manager] = CloudFormationCarpenter._packageTools[manager]().apply(packages,
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/rpm_tools.py", line 80, in apply
+    raise ToolError("Yum does not have %s available for installation" % pkg_spec)
+cfnbootstrap.construction_errors.ToolError: Yum does not have postgresql-devel available for installation
+2025-10-21 11:52:33,407 [ERROR] -----------------------BUILD FAILED!------------------------
+2025-10-21 11:52:33,407 [ERROR] Unhandled exception during build: Yum does not have postgresql-devel available for installation
+Traceback (most recent call last):
+  File "/opt/aws/bin/cfn-init", line 181, in <module>
+    worklog.build(metadata, configSets, strict_mode)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 137, in build
+    Contractor(metadata, strict_mode).build(configSets, self)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 567, in build
+    self.run_config(config, worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 244, in build
+    changes['packages'][manager] = CloudFormationCarpenter._packageTools[manager]().apply(packages,
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/rpm_tools.py", line 80, in apply
+    raise ToolError("Yum does not have %s available for installation" % pkg_spec)
+cfnbootstrap.construction_errors.ToolError: Yum does not have postgresql-devel available for installation
+2025-10-21 11:55:29,444 [INFO] -----------------------Starting build-----------------------
+2025-10-21 11:55:29,449 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 11:55:29,451 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 11:55:29,454 [INFO] Running config prebuild_0_jeceProject
+2025-10-21 11:55:44,829 [ERROR] postgresql-devel is not available to be installed
+2025-10-21 11:55:44,830 [ERROR] Error encountered during build of prebuild_0_jeceProject: Yum does not have postgresql-devel available for installation
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 244, in build
+    changes['packages'][manager] = CloudFormationCarpenter._packageTools[manager]().apply(packages,
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/rpm_tools.py", line 80, in apply
+    raise ToolError("Yum does not have %s available for installation" % pkg_spec)
+cfnbootstrap.construction_errors.ToolError: Yum does not have postgresql-devel available for installation
+2025-10-21 11:55:44,830 [ERROR] -----------------------BUILD FAILED!------------------------
+2025-10-21 11:55:44,830 [ERROR] Unhandled exception during build: Yum does not have postgresql-devel available for installation
+Traceback (most recent call last):
+  File "/opt/aws/bin/cfn-init", line 181, in <module>
+    worklog.build(metadata, configSets, strict_mode)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 137, in build
+    Contractor(metadata, strict_mode).build(configSets, self)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 567, in build
+    self.run_config(config, worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 244, in build
+    changes['packages'][manager] = CloudFormationCarpenter._packageTools[manager]().apply(packages,
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/rpm_tools.py", line 80, in apply
+    raise ToolError("Yum does not have %s available for installation" % pkg_spec)
+cfnbootstrap.construction_errors.ToolError: Yum does not have postgresql-devel available for installation
+2025-10-21 12:12:13,413 [INFO] -----------------------Starting build-----------------------
+2025-10-21 12:12:13,418 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 12:12:13,421 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 12:12:13,423 [INFO] Running config prebuild_0_jeceProject
+2025-10-21 12:12:28,798 [ERROR] postgresql-devel is not available to be installed
+2025-10-21 12:12:28,799 [ERROR] Error encountered during build of prebuild_0_jeceProject: Yum does not have postgresql-devel available for installation
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 244, in build
+    changes['packages'][manager] = CloudFormationCarpenter._packageTools[manager]().apply(packages,
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/rpm_tools.py", line 80, in apply
+    raise ToolError("Yum does not have %s available for installation" % pkg_spec)
+cfnbootstrap.construction_errors.ToolError: Yum does not have postgresql-devel available for installation
+2025-10-21 12:12:28,799 [ERROR] -----------------------BUILD FAILED!------------------------
+2025-10-21 12:12:28,799 [ERROR] Unhandled exception during build: Yum does not have postgresql-devel available for installation
+Traceback (most recent call last):
+  File "/opt/aws/bin/cfn-init", line 181, in <module>
+    worklog.build(metadata, configSets, strict_mode)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 137, in build
+    Contractor(metadata, strict_mode).build(configSets, self)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 567, in build
+    self.run_config(config, worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 244, in build
+    changes['packages'][manager] = CloudFormationCarpenter._packageTools[manager]().apply(packages,
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/rpm_tools.py", line 80, in apply
+    raise ToolError("Yum does not have %s available for installation" % pkg_spec)
+cfnbootstrap.construction_errors.ToolError: Yum does not have postgresql-devel available for installation
+2025-10-21 12:47:15,338 [INFO] -----------------------Starting build-----------------------
+2025-10-21 12:47:15,343 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 12:47:15,346 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 12:47:15,348 [INFO] Running config prebuild_0_jeceProject
+2025-10-21 12:47:30,671 [ERROR] postgresql-devel is not available to be installed
+2025-10-21 12:47:30,671 [ERROR] Error encountered during build of prebuild_0_jeceProject: Yum does not have postgresql-devel available for installation
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 244, in build
+    changes['packages'][manager] = CloudFormationCarpenter._packageTools[manager]().apply(packages,
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/rpm_tools.py", line 80, in apply
+    raise ToolError("Yum does not have %s available for installation" % pkg_spec)
+cfnbootstrap.construction_errors.ToolError: Yum does not have postgresql-devel available for installation
+2025-10-21 12:47:30,672 [ERROR] -----------------------BUILD FAILED!------------------------
+2025-10-21 12:47:30,672 [ERROR] Unhandled exception during build: Yum does not have postgresql-devel available for installation
+Traceback (most recent call last):
+  File "/opt/aws/bin/cfn-init", line 181, in <module>
+    worklog.build(metadata, configSets, strict_mode)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 137, in build
+    Contractor(metadata, strict_mode).build(configSets, self)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 567, in build
+    self.run_config(config, worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 244, in build
+    changes['packages'][manager] = CloudFormationCarpenter._packageTools[manager]().apply(packages,
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/rpm_tools.py", line 80, in apply
+    raise ToolError("Yum does not have %s available for installation" % pkg_spec)
+cfnbootstrap.construction_errors.ToolError: Yum does not have postgresql-devel available for installation
+2025-10-21 12:51:12,861 [INFO] -----------------------Starting build-----------------------
+2025-10-21 12:51:12,866 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 12:51:12,869 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 12:51:12,871 [INFO] Running config prebuild_0_jeceProject
+2025-10-21 12:51:28,166 [ERROR] postgresql-devel is not available to be installed
+2025-10-21 12:51:28,166 [ERROR] Error encountered during build of prebuild_0_jeceProject: Yum does not have postgresql-devel available for installation
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 244, in build
+    changes['packages'][manager] = CloudFormationCarpenter._packageTools[manager]().apply(packages,
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/rpm_tools.py", line 80, in apply
+    raise ToolError("Yum does not have %s available for installation" % pkg_spec)
+cfnbootstrap.construction_errors.ToolError: Yum does not have postgresql-devel available for installation
+2025-10-21 12:51:28,167 [ERROR] -----------------------BUILD FAILED!------------------------
+2025-10-21 12:51:28,167 [ERROR] Unhandled exception during build: Yum does not have postgresql-devel available for installation
+Traceback (most recent call last):
+  File "/opt/aws/bin/cfn-init", line 181, in <module>
+    worklog.build(metadata, configSets, strict_mode)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 137, in build
+    Contractor(metadata, strict_mode).build(configSets, self)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 567, in build
+    self.run_config(config, worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 244, in build
+    changes['packages'][manager] = CloudFormationCarpenter._packageTools[manager]().apply(packages,
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/rpm_tools.py", line 80, in apply
+    raise ToolError("Yum does not have %s available for installation" % pkg_spec)
+cfnbootstrap.construction_errors.ToolError: Yum does not have postgresql-devel available for installation
+2025-10-21 12:58:05,757 [INFO] -----------------------Starting build-----------------------
+2025-10-21 12:58:05,762 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 12:58:05,765 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 12:58:05,767 [INFO] Running config prebuild_0_jeceProject
+2025-10-21 12:58:21,315 [ERROR] postgresql-devel is not available to be installed
+2025-10-21 12:58:21,315 [ERROR] Error encountered during build of prebuild_0_jeceProject: Yum does not have postgresql-devel available for installation
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 244, in build
+    changes['packages'][manager] = CloudFormationCarpenter._packageTools[manager]().apply(packages,
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/rpm_tools.py", line 80, in apply
+    raise ToolError("Yum does not have %s available for installation" % pkg_spec)
+cfnbootstrap.construction_errors.ToolError: Yum does not have postgresql-devel available for installation
+2025-10-21 12:58:21,316 [ERROR] -----------------------BUILD FAILED!------------------------
+2025-10-21 12:58:21,316 [ERROR] Unhandled exception during build: Yum does not have postgresql-devel available for installation
+Traceback (most recent call last):
+  File "/opt/aws/bin/cfn-init", line 181, in <module>
+    worklog.build(metadata, configSets, strict_mode)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 137, in build
+    Contractor(metadata, strict_mode).build(configSets, self)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 567, in build
+    self.run_config(config, worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 244, in build
+    changes['packages'][manager] = CloudFormationCarpenter._packageTools[manager]().apply(packages,
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/rpm_tools.py", line 80, in apply
+    raise ToolError("Yum does not have %s available for installation" % pkg_spec)
+cfnbootstrap.construction_errors.ToolError: Yum does not have postgresql-devel available for installation
+2025-10-21 13:00:00,394 [INFO] -----------------------Starting build-----------------------
+2025-10-21 13:00:00,399 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 13:00:00,402 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 13:00:00,405 [INFO] Running config prebuild_0_jeceProject
+2025-10-21 13:00:19,136 [ERROR] postgresql-devel is not available to be installed
+2025-10-21 13:00:19,136 [ERROR] Error encountered during build of prebuild_0_jeceProject: Yum does not have postgresql-devel available for installation
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 244, in build
+    changes['packages'][manager] = CloudFormationCarpenter._packageTools[manager]().apply(packages,
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/rpm_tools.py", line 80, in apply
+    raise ToolError("Yum does not have %s available for installation" % pkg_spec)
+cfnbootstrap.construction_errors.ToolError: Yum does not have postgresql-devel available for installation
+2025-10-21 13:00:19,137 [ERROR] -----------------------BUILD FAILED!------------------------
+2025-10-21 13:00:19,137 [ERROR] Unhandled exception during build: Yum does not have postgresql-devel available for installation
+Traceback (most recent call last):
+  File "/opt/aws/bin/cfn-init", line 181, in <module>
+    worklog.build(metadata, configSets, strict_mode)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 137, in build
+    Contractor(metadata, strict_mode).build(configSets, self)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 567, in build
+    self.run_config(config, worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 244, in build
+    changes['packages'][manager] = CloudFormationCarpenter._packageTools[manager]().apply(packages,
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/rpm_tools.py", line 80, in apply
+    raise ToolError("Yum does not have %s available for installation" % pkg_spec)
+cfnbootstrap.construction_errors.ToolError: Yum does not have postgresql-devel available for installation
+2025-10-21 13:10:49,633 [INFO] -----------------------Starting build-----------------------
+2025-10-21 13:10:49,638 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 13:10:49,640 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 13:10:49,643 [INFO] Running config prebuild_0_jeceProject
+2025-10-21 13:10:50,519 [INFO] Command 01_pip_upgrade succeeded
+2025-10-21 13:10:50,899 [ERROR] Command 02_install_requirements (pip install -r requirements.txt) failed
+2025-10-21 13:10:50,900 [ERROR] Error encountered during build of prebuild_0_jeceProject: Command 02_install_requirements failed
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 02_install_requirements failed
+2025-10-21 13:10:50,901 [ERROR] -----------------------BUILD FAILED!------------------------
+2025-10-21 13:10:50,901 [ERROR] Unhandled exception during build: Command 02_install_requirements failed
+Traceback (most recent call last):
+  File "/opt/aws/bin/cfn-init", line 181, in <module>
+    worklog.build(metadata, configSets, strict_mode)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 137, in build
+    Contractor(metadata, strict_mode).build(configSets, self)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 567, in build
+    self.run_config(config, worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 02_install_requirements failed
+2025-10-21 13:15:23,190 [INFO] -----------------------Starting build-----------------------
+2025-10-21 13:15:23,196 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 13:15:23,198 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 13:15:23,200 [INFO] Running config prebuild_0_jeceProject
+2025-10-21 13:15:23,690 [INFO] Command 01_pip_upgrade succeeded
+2025-10-21 13:15:24,066 [ERROR] Command 02_install_requirements (pip install -r requirements.txt) failed
+2025-10-21 13:15:24,067 [ERROR] Error encountered during build of prebuild_0_jeceProject: Command 02_install_requirements failed
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 02_install_requirements failed
+2025-10-21 13:15:24,067 [ERROR] -----------------------BUILD FAILED!------------------------
+2025-10-21 13:15:24,067 [ERROR] Unhandled exception during build: Command 02_install_requirements failed
+Traceback (most recent call last):
+  File "/opt/aws/bin/cfn-init", line 181, in <module>
+    worklog.build(metadata, configSets, strict_mode)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 137, in build
+    Contractor(metadata, strict_mode).build(configSets, self)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 567, in build
+    self.run_config(config, worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 02_install_requirements failed
+2025-10-21 13:29:44,449 [INFO] -----------------------Starting build-----------------------
+2025-10-21 13:29:44,454 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 13:29:44,457 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 13:29:44,459 [INFO] Running config prebuild_0_jeceProject
+2025-10-21 13:29:44,491 [ERROR] Command 01_pip_upgrade (python3 -m pip install --upgrade pip) failed
+2025-10-21 13:29:44,491 [ERROR] Error encountered during build of prebuild_0_jeceProject: Command 01_pip_upgrade failed
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 01_pip_upgrade failed
+2025-10-21 13:29:44,492 [ERROR] -----------------------BUILD FAILED!------------------------
+2025-10-21 13:29:44,492 [ERROR] Unhandled exception during build: Command 01_pip_upgrade failed
+Traceback (most recent call last):
+  File "/opt/aws/bin/cfn-init", line 181, in <module>
+    worklog.build(metadata, configSets, strict_mode)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 137, in build
+    Contractor(metadata, strict_mode).build(configSets, self)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 567, in build
+    self.run_config(config, worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 01_pip_upgrade failed
+2025-10-21 13:30:59,987 [INFO] -----------------------Starting build-----------------------
+2025-10-21 13:30:59,992 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 13:30:59,994 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 13:30:59,997 [INFO] Running config prebuild_0_jeceProject
+2025-10-21 13:31:00,166 [ERROR] Command 01_pip_upgrade (python3 -m pip install --upgrade pip) failed
+2025-10-21 13:31:00,166 [ERROR] Error encountered during build of prebuild_0_jeceProject: Command 01_pip_upgrade failed
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 01_pip_upgrade failed
+2025-10-21 13:31:00,167 [ERROR] -----------------------BUILD FAILED!------------------------
+2025-10-21 13:31:00,169 [ERROR] Unhandled exception during build: Command 01_pip_upgrade failed
+Traceback (most recent call last):
+  File "/opt/aws/bin/cfn-init", line 181, in <module>
+    worklog.build(metadata, configSets, strict_mode)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 137, in build
+    Contractor(metadata, strict_mode).build(configSets, self)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 567, in build
+    self.run_config(config, worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 01_pip_upgrade failed
+2025-10-21 13:51:00,519 [INFO] -----------------------Starting build-----------------------
+2025-10-21 13:51:00,525 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 13:51:00,527 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 13:51:00,529 [INFO] Running config prebuild_0_jeceProject
+2025-10-21 13:51:00,566 [ERROR] Command 01_pip_upgrade (python3 -m pip install --upgrade pip) failed
+2025-10-21 13:51:00,566 [ERROR] Error encountered during build of prebuild_0_jeceProject: Command 01_pip_upgrade failed
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 01_pip_upgrade failed
+2025-10-21 13:51:00,566 [ERROR] -----------------------BUILD FAILED!------------------------
+2025-10-21 13:51:00,566 [ERROR] Unhandled exception during build: Command 01_pip_upgrade failed
+Traceback (most recent call last):
+  File "/opt/aws/bin/cfn-init", line 181, in <module>
+    worklog.build(metadata, configSets, strict_mode)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 137, in build
+    Contractor(metadata, strict_mode).build(configSets, self)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 567, in build
+    self.run_config(config, worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 01_pip_upgrade failed
+2025-10-21 13:55:39,207 [INFO] -----------------------Starting build-----------------------
+2025-10-21 13:55:39,212 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 13:55:39,214 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 13:55:39,216 [INFO] Running config prebuild_0_jeceProject
+2025-10-21 13:55:39,247 [ERROR] Command 01_pip_upgrade (python3 -m pip install --upgrade pip) failed
+2025-10-21 13:55:39,247 [ERROR] Error encountered during build of prebuild_0_jeceProject: Command 01_pip_upgrade failed
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 01_pip_upgrade failed
+2025-10-21 13:55:39,248 [ERROR] -----------------------BUILD FAILED!------------------------
+2025-10-21 13:55:39,248 [ERROR] Unhandled exception during build: Command 01_pip_upgrade failed
+Traceback (most recent call last):
+  File "/opt/aws/bin/cfn-init", line 181, in <module>
+    worklog.build(metadata, configSets, strict_mode)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 137, in build
+    Contractor(metadata, strict_mode).build(configSets, self)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 567, in build
+    self.run_config(config, worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 01_pip_upgrade failed
+2025-10-21 14:04:43,198 [INFO] -----------------------Starting build-----------------------
+2025-10-21 14:04:43,203 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 14:04:43,206 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 14:04:43,208 [INFO] Running config prebuild_0_jeceProject
+2025-10-21 14:04:43,240 [INFO] Command 01_upgrade_pip succeeded
+2025-10-21 14:04:43,633 [ERROR] Command 02_install_requirements (pip install -r /var/app/staging/requirements.txt) failed
+2025-10-21 14:04:43,633 [ERROR] Error encountered during build of prebuild_0_jeceProject: Command 02_install_requirements failed
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 02_install_requirements failed
+2025-10-21 14:04:43,633 [ERROR] -----------------------BUILD FAILED!------------------------
+2025-10-21 14:04:43,633 [ERROR] Unhandled exception during build: Command 02_install_requirements failed
+Traceback (most recent call last):
+  File "/opt/aws/bin/cfn-init", line 181, in <module>
+    worklog.build(metadata, configSets, strict_mode)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 137, in build
+    Contractor(metadata, strict_mode).build(configSets, self)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 567, in build
+    self.run_config(config, worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 02_install_requirements failed
+2025-10-21 14:08:10,057 [INFO] -----------------------Starting build-----------------------
+2025-10-21 14:08:10,062 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 14:08:10,065 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 14:08:10,067 [INFO] Running config prebuild_0_jeceProject
+2025-10-21 14:08:10,098 [INFO] Command 01_upgrade_pip succeeded
+2025-10-21 14:08:10,493 [ERROR] Command 02_install_requirements (pip install -r /var/app/staging/requirements.txt) failed
+2025-10-21 14:08:10,493 [ERROR] Error encountered during build of prebuild_0_jeceProject: Command 02_install_requirements failed
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 02_install_requirements failed
+2025-10-21 14:08:10,493 [ERROR] -----------------------BUILD FAILED!------------------------
+2025-10-21 14:08:10,493 [ERROR] Unhandled exception during build: Command 02_install_requirements failed
+Traceback (most recent call last):
+  File "/opt/aws/bin/cfn-init", line 181, in <module>
+    worklog.build(metadata, configSets, strict_mode)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 137, in build
+    Contractor(metadata, strict_mode).build(configSets, self)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 567, in build
+    self.run_config(config, worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 02_install_requirements failed
+2025-10-21 14:41:31,122 [INFO] -----------------------Starting build-----------------------
+2025-10-21 14:41:31,128 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-10-21 14:41:31,130 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-10-21 14:41:31,133 [INFO] Running config prebuild_0_jeceProject
+2025-10-21 14:41:31,164 [INFO] Command 01_upgrade_pip succeeded
+2025-10-21 14:41:31,547 [ERROR] Command 02_install_requirements (pip install -r /var/app/staging/requirements.txt) failed
+2025-10-21 14:41:31,547 [ERROR] Error encountered during build of prebuild_0_jeceProject: Command 02_install_requirements failed
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 02_install_requirements failed
+2025-10-21 14:41:31,548 [ERROR] -----------------------BUILD FAILED!------------------------
+2025-10-21 14:41:31,548 [ERROR] Unhandled exception during build: Command 02_install_requirements failed
+Traceback (most recent call last):
+  File "/opt/aws/bin/cfn-init", line 181, in <module>
+    worklog.build(metadata, configSets, strict_mode)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 137, in build
+    Contractor(metadata, strict_mode).build(configSets, self)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 567, in build
+    self.run_config(config, worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 579, in run_config
+    CloudFormationCarpenter(config, self._auth_config, self.strict_mode).build(worklog)
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/construction.py", line 277, in build
+    changes['commands'] = CommandTool().apply(
+  File "/usr/lib/python3.9/site-packages/cfnbootstrap/command_tool.py", line 127, in apply
+    raise ToolError(u"Command %s failed" % name)
+cfnbootstrap.construction_errors.ToolError: Command 02_install_requirements failed
