@@ -155,9 +155,7 @@ WSGI_APPLICATION = 'jeceProject.wsgi.application'
 
 if os.getenv("USE_POSTGRES", "False") == "True":
     DATABASES = {
-        "default": dj_database_url.config(
-            default=f"postgres://{os.getenv('DATABASE_USER')}:{os.getenv('DATABASE_PASSWORD')}@{os.getenv('DATABASE_HOST')}:{os.getenv('DATABASE_PORT', '5432')}/{os.getenv('DATABASE_NAME')}"
-        )
+        "default": dj_database_url.parse(os.getenv("DATABASE_URL"), conn_max_age=600)
     }
 else:
     DATABASES = {
